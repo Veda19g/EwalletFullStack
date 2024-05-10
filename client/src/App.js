@@ -6,7 +6,7 @@ import { Request } from "./pages/Request";
 import  Home  from "./pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AcceptRequests from "./pages/AcceptRequests";
-
+import Track from "./pages/Track";
 function App() {
   return (
     <Router>
@@ -18,6 +18,7 @@ function App() {
         <Route path="/request" element={<Request/>} /> 
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/requests" element={<AcceptRequests/>} />
+        <Route path="/track" element={<Track/>} />
       </Routes>
     </Router>
   );

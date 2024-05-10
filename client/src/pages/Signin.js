@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { login } from "../actions/actions";
 import { useNavigate } from "react-router-dom";
+import Navbar from "./Navbar";
 export function Signin(){
     const navigate=useNavigate();
     const [formData,setFormData]=useState({username:"",password:""});
@@ -30,9 +31,12 @@ export function Signin(){
     }
 
         return(
-            
-            <div className="flex justify-center items-center h-screen bg-slate-600">
-            <div className="bg-white md:p-8 font-serif rounded-xl shadow-md md:w-96  p-5 ">
+            <div>
+                <div>
+                    <Navbar/>
+                </div>
+                <div className="flex justify-center items-center h-screen bg-black">
+            <div className="bg-white md:p-8 rounded-xl shadow-md md:w-96  p-5 ">
                 <h2 className="md:text-3xl font-bold  mb-4 text-center text-black text-xl ">Signin</h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
@@ -64,7 +68,7 @@ export function Signin(){
             </div>
         </div>   
 
-
-        )
+            </div>
+                    )
     
 }

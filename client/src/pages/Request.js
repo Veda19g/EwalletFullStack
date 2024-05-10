@@ -1,7 +1,8 @@
 import { useSearchParams } from 'react-router-dom';
 import axios from "axios";
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Header from './Header';
 
 export const Request = () => {
     const navigate = useNavigate();
@@ -10,10 +11,38 @@ export const Request = () => {
     const name = searchParams.get("name");
     const [amount, setAmount] = useState(0);
 
+    const [fi, setFirstName] = useState("");
+    const [la, setLastName] = useState("");
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get("http://localhost:8000/api/v1/user/userDetails",
+                {
+                    withCredentials: true,
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                });
+                console.log("response", response);
+                const { firstName,lastName } = response.data; // Destructure balance and user from response
+                setFirstName(firstName); 
+                setLastName(lastName); // Set user state
+            } catch (err) {
+                console.log("error in ", err);
+            }
+        };
+        fetchData(); // Call fetchData function
+    }, []);
+
     return (
-        <div className="flex justify-center h-screen bg-slate-600">
+        <div>
+            <div>
+                <Header firstName={fi} lastName={la}/>
+            </div>
+            <div className="flex justify-center h-screen bg-black">
             <div className="h-full flex flex-col justify-center">
-                <div className="border text-card-foreground max-w-md p-3  w-96 bg-white shadow-lg rounded-lg">
+                <div className="border text-card-foreground max-w-md p-3  md:w-96 bg-white shadow-lg rounded-lg w-80">
                     <div className="flex flex-col space-y-1 p-6">
                         <h2 className="text-3xl font-bold text-center">Request Money</h2>
                     </div>
@@ -66,5 +95,7 @@ export const Request = () => {
                 </div>
             </div>
         </div>
+        </div>
+        
     );
 };

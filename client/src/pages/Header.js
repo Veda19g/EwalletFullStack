@@ -44,10 +44,14 @@ const Header = (props) => {
     window.location.href='/dashboard';
   }
 
+  const handletrack=()=>{
+    window.location.href='/track';
+  }
+
   return (
     <div>
-       <div className='flex justify-between p-8 shadow bg-white'>
-      <div onClick={home} className='md:text-3xl font-mono text-xl cursor-pointer '>
+       <div className='flex justify-between p-8 shadow bg-black border-b-2 text-white'>
+      <div onClick={home} className='md:text-3xl  text-2xl cursor-pointer '>
        {props.firstName} {props.lastName}
       </div>
       <div className='md:hidden flex gap-4'>
@@ -65,16 +69,16 @@ const Header = (props) => {
         <img onClick={handleMenu} src={closeMenu} className='w-10'/>
         </div>
       <div className='mt-10 flex flex-col gap-10 justify-center items-center text-black'>
-        <div className='text-lg font-semibold cursor-pointer'>Track</div>
-        <div className='text-lg font-semibold cursor-pointer'>Manage</div>
-        <div className='text-lg font-semibold cursor-pointer'onClick={handleRequests} >Requests</div>
+        <div onClick={handletrack} className='text-xl text-yellow-400 font-semibold cursor-pointer'>Track</div>
+        <div className='text-xl text-yellow-400 font-semibold cursor-pointer'>Manage</div>
+        <div className='text-xl text-yellow-400 font-semibold cursor-pointer'onClick={handleRequests} >Requests</div>
       </div>
         </div>}
       <div className='hidden md:flex md:gap-10 md:justify-center md:items-center'>
         <div><img onClick={handleNotification} src={NotificationImg} alt='' className='w-8'/></div>
-        <div className='text-lg font-semibold cursor-pointer'>Track</div>
-        <div className='text-lg font-semibold cursor-pointer'>Manage</div>
-        <div className='text-lg font-semibold cursor-pointer' onClick={handleRequests}>Requests</div>
+        <div onClick={handletrack} className='text-xl font-semibold cursor-pointer text-yellow-400'>Track</div>
+        <div className='text-xl font-semibold cursor-pointer text-yellow-400'>Manage</div>
+        <div className='text-xl font-semibold cursor-pointer text-yellow-400' onClick={handleRequests}>Requests</div>
       </div>
     </div>
     </div>
