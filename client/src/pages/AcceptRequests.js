@@ -77,16 +77,16 @@ export const  AcceptRequests=()=>{
 
     return(
         
-        <div className="bg-slate-600 h-screen">
+        <div className="bg-black h-screen">
              <div>
                 <Header firstName={firstName} lastName={lastName} />
              </div>
-             <div className="p-4 font-semibold font-mono text-3xl text-white ">Your Balence is {balance}</div>
-             <div className="flex flex-col p-8">
-                <div className="bg-slate-400 rounded-lg p-2 shadow-md ">
+             <div className="p-4 font-semibold  text-3xl text-white ">Your Balence is {balance}</div>
+             <div className="flex flex-col md:p-8 p-4 text-white">
+                <div className="bg-black rounded-lg p-2 shadow-md ">
                 {Requests.map((request) => (
-          <div className="flex flex-row justify-between m-8 items-center md:gap-0 gap-5 md:border md:border-slate-800 md:rounded-lg md:p-4 " key={request.user._id}>
-          <div className="md:text-xl font-semibold font-mono textmd text-left">
+          <div className="flex flex-row justify-between m-8 items-center md:gap-0 gap-5 border border-white rounded-lg md:p-4 p-4 " key={request.user._id}>
+          <div className="md:text-3xl  text-md text-left">
               {request.user.firstName} {request.user.lastName} asks for {request.amount}
           </div>
           <div className="flex md:gap-10 gap-5 items-center">

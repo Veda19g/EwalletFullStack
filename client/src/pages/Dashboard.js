@@ -71,21 +71,20 @@ export const  Dashboard=()=>{
 
     return(
         
-        <div className="bg-slate-600 h-screen">
+        <div className="bg-black h-screen">
              <div>
                 <Header firstName={firstName} lastName={lastName} />
              </div>
-             <div></div>
-             <div className="flex flex-col p-8">
-                <div className="bg-slate-400 rounded-lg p-2 shadow-md ">
+             <div className="flex flex-col md:p-8 p-4">
+                <div className="bg-yellow rounded-lg md:p-2 shadow-md text-white">
                 {users.map((user) => (
-          <div className="flex flex-row justify-between m-8 items-center md:gap-0 gap-5 md:border md:border-slate-800 md:rounded-lg md:p-4 " key={user._id}>
-          <div className="md:text-xl font-semibold font-mono textmd text-left">
+          <div className="flex flex-row justify-between m-8 items-center md:gap-0 gap-5 p-3 border border-white  rounded-lg md:p-4 " key={user._id}>
+          <div className="md:text-3xl font-semibold  textmd text-left">
               {user.firstName} {user.lastName}
           </div>
-          <div className="flex md:gap-10 gap-5 items-center">
-              <button className="md:py-4 md:px-3 p-3 rounded-lg bg-red-500 md:text-lg text-sm" onClick={()=>handleRequest(user)}>Request</button>
-              <button className="md:py-4 md:px-3 p-3 rounded-lg bg-green-500 md:text-lg text-sm" onClick={() => handleSend(user)}>Send</button>
+          <div className="flex md:gap-10 gap-4 items-center">
+              <button className="md:py-4 md:px-3 p-1 rounded-lg bg-red-500 md:text-lg text-sm" onClick={()=>handleRequest(user)}>Request</button>
+              <button className="md:py-4 md:px-3  p-1 rounded-lg bg-green-500 md:text-lg text-sm" onClick={() => handleSend(user)}>Send</button>
           </div>
          
           </div>

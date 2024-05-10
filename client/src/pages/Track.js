@@ -54,23 +54,22 @@ const Track = () => {
 
   return (
     <div>
-        <div className="bg-slate-600 h-screen">
+        <div className="bg-black h-screen">
              <div>
                 <Header firstName={firstName} lastName={lastName} />
              </div>
-            <div className="flex justify-center items-center h-full">
-                <div className="bg-white p-8 rounded-2xl shadow-2xl">
-                    <h1 className="text-2xl font-semibold text-slate-400">Track</h1>
-                    <div className="flex flex-col gap-4">
+            <div className="flex justify-center  h-screen bg-black">
+                <div className="bg-black p-8 rounded-2xl shadow-2xl">
+                    <div className="flex flex-col gap-4 bg-black text-white">
                         <div className="flex flex-col gap-1">
-                            <div className="text-lg font-semibold text-slate-400">Track your transactions here</div>
+                            <div className="text-lg font-semibold text-slate-400 md:text-3xl">Track your transactions here 📝</div>
                         </div>
                         <div>
-                        {notifications.length>0 && <div className="bg-white p-8 rounded-2xl shadow-2xl ml-8">
+                        {notifications.length>0 && <div className="bg-white p-8 rounded-2xl shadow-2xl ml-8 mt-4">
                     <div className="flex flex-col gap-4">
                         {notifications.map((notification, index) => (
-                        <div key={index} className="flex flex-col gap-1">
-                            <div className="text-lg font-semibold text-slate-400">{notification}</div>
+                        <div key={index} className="flex flex-col gap-1 border-b-2 border-black">
+                            <div className="text-lg font-semibold text-slate-400 md:text-xl">{notification}</div>
                         </div>
                         ))}
                     </div>
