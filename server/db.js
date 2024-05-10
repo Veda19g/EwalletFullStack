@@ -1,6 +1,7 @@
 const mongoose =require("mongoose");
-
-const mongoURI = "mongodb+srv://vedang19:vedang123@cluster0.x1ymzdc.mongodb.net/Ewallet";
+const dotenv = require("dotenv");
+dotenv.config();
+const mongoURI = process.env.MONGO_URI;
 
 mongoose.connect(mongoURI,{useNewUrlParser: true});
 
