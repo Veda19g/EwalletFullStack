@@ -13,7 +13,7 @@ export const  Dashboard=()=>{
     useEffect(() => {  
         const fetchData = async () => {              
             try {
-                const response = await axios.get("http://localhost:8000/api/v1/user/userDetails",
+                const response = await axios.get("https://ewalletfullstack-1.onrender.com/api/v1/user/userDetails",
                 {
                     withCredentials: true,
                     headers: {
@@ -36,7 +36,7 @@ export const  Dashboard=()=>{
       useEffect(()=>{
           const fetchUsers=async()=>{
               try{
-                  const response=await axios.get("http://localhost:8000/api/v1/user/bulk",{
+                  const response=await axios.get("https://ewalletfullstack-1.onrender.com/api/v1/user/bulk",{
                       withCredentials:true,
                       headers:{
                           "Content-Type":"application/json",

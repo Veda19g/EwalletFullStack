@@ -14,7 +14,7 @@ export const  AcceptRequests=()=>{
     useEffect(() => {  
         const fetchData = async () => {              
             try {
-                const response = await axios.get("http://localhost:8000/api/v1/user/userDetails",
+                const response = await axios.get("https://ewalletfullstack-1.onrender.com/api/v1/user/userDetails",
                 {
                     withCredentials: true,
                     headers: {
@@ -36,7 +36,7 @@ export const  AcceptRequests=()=>{
       useEffect(()=>{
           const fetchRequests=async()=>{
               try{
-                  const response=await axios.get("http://localhost:8000/api/v1/account/getAllrequests",{
+                  const response=await axios.get("https://ewalletfullstack-1.onrender.com/api/v1/account/getAllrequests",{
                       withCredentials:true,
                       headers:{
                           "Content-Type":"application/json",
@@ -55,7 +55,7 @@ export const  AcceptRequests=()=>{
     
     const handleGive =(request) => {
         try{
-            const response=axios.post("http://localhost:8000/api/v1/account/approve",{
+            const response=axios.post("https://ewalletfullstack-1.onrender.com/api/v1/account/approve",{
                 to:request.user._id,
                 amount:request.amount,
             },{
