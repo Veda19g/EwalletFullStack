@@ -46,7 +46,7 @@ export function Signup(){
                             name="username"
                             value={formData.username}
                             onChange={handleChange}
-                            placeholder="Enter your username"
+                            placeholder="email compulsory"
                             className="mt-1 block w-full text-xl border md:p-2 p-1 border-gray-300 rounded-md shadow-sm focus:ring-black focus:border-black sm:text-sm"
                         />
                     </div>
@@ -82,7 +82,7 @@ export function Signup(){
                             name="password"
                             value={formData.password}
                             onChange={handleChange}
-                            placeholder="Enter your password"
+                            placeholder="six characters minimum"
                             className="mt-1 md:p-3 p-1 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-black focus:border-black sm:text-sm"
                         />
                     </div>
