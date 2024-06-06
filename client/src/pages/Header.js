@@ -28,7 +28,7 @@ const Header = (props) => {
           },
         });
         console.log("response",response);
-        setNotifications(response.data.unreadNotifications);
+        setNotifications(response.data.unreadNotifications.slice(0,5));
       }catch(err){
         console.log(err);
       }
@@ -46,6 +46,10 @@ const Header = (props) => {
 
   const handletrack=()=>{
     window.location.href='/track';
+  }
+  
+  const handleManage=()=>{
+    window.location.href='/manage';
   }
 
   return (
@@ -70,14 +74,14 @@ const Header = (props) => {
         </div>
       <div className='mt-10 flex flex-col gap-10 justify-center items-center text-black'>
         <div onClick={handletrack} className='text-xl text-yellow-400 font-semibold cursor-pointer'>Track</div>
-        <div className='text-xl text-yellow-400 font-semibold cursor-pointer'>Manage</div>
+        <div onClick={handleManage} className='text-xl text-yellow-400 font-semibold cursor-pointer'>Manage</div>
         <div className='text-xl text-yellow-400 font-semibold cursor-pointer'onClick={handleRequests} >Requests</div>
       </div>
         </div>}
       <div className='hidden md:flex md:gap-10 md:justify-center md:items-center'>
         <div><img onClick={handleNotification} src={NotificationImg} alt='' className='w-8'/></div>
         <div onClick={handletrack} className='text-xl font-semibold cursor-pointer text-yellow-400'>Track</div>
-        <div className='text-xl font-semibold cursor-pointer text-yellow-400'>Manage</div>
+        <div onClick={handleManage} className='text-xl font-semibold cursor-pointer text-yellow-400'>Manage</div>
         <div className='text-xl font-semibold cursor-pointer text-yellow-400' onClick={handleRequests}>Requests</div>
       </div>
     </div>

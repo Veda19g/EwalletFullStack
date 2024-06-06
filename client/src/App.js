@@ -4,6 +4,7 @@ import { Send } from "./pages/Send";
 import { Dashboard } from "./pages/Dashboard";
 import { Request } from "./pages/Request";
 import  Home  from "./pages/Home";
+import  Manage  from "./pages/Manage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AcceptRequests from "./pages/AcceptRequests";
 import Track from "./pages/Track";
@@ -19,6 +20,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/requests" element={<AcceptRequests/>} />
         <Route path="/track" element={<Track/>} />
+        <Route path="/manage" element={<Manage/>} />
       </Routes>
     </Router>
   );

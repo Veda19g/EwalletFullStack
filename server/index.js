@@ -7,7 +7,7 @@ const cookies=require("cookie-parser")
 const backendroutes=require("./routes/backend.routes");
 const app=express();
 // Add this before defining routes
-app.options('*', cors());
+
 app.use(cors({
     origin: 'http://localhost:3000',
     credentials: true // Make sure to enable credentials
