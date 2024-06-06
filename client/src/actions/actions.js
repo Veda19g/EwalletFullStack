@@ -6,7 +6,7 @@ export const  signup=async (user)=>{
 
 try{
     console.log("user",user);
-    const response=await axios.post("http://localhost:8000/api/v1/user/signin",user,{
+    const response=await axios.post("https://ewalletfullstack.onrender.com/api/v1/user/signin",user,{
         withCredentials:true,
     }  );
     console.log("response",response);
@@ -36,7 +36,7 @@ catch(err){
 export const login=async(user)=>{
     try {
         console.log("user",user);
-    const response = await axios.post("http://localhost:8000/api/v1/user/signin", 
+    const response = await axios.post("https://ewalletfullstack.onrender.com/api/v1/user/signin", 
     user ,
     {
         withCredentials: true,

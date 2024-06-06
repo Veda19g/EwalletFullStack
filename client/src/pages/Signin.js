@@ -20,7 +20,7 @@ export function Signin(){
           navigate('/dashboard');
           return 
       }  
-      alert('not allowed for you :/ (jk, plz try again later), have a great day :)');
+      alert('not allowed for you have a great day :)');
       
       return;  
     }

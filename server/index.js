@@ -9,7 +9,7 @@ const app=express();
 // Add this before defining routes
 
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: 'https://frontend-smoky-eight-36.vercel.app/',
     credentials: true // Make sure to enable credentials
   }));
 app.use(express.json());  
