@@ -6,8 +6,10 @@ const cors=require("cors");
 const cookies=require("cookie-parser")
 const backendroutes=require("./routes/backend.routes");
 const app=express();
+// Add this before defining routes
+app.options('*', cors());
 app.use(cors({
-    origin: 'https://ewallet-full-stack-cn6vft23e-veda19gs-projects.vercel.app',
+    origin: 'http://localhost:3000',
     credentials: true // Make sure to enable credentials
   }));
 app.use(express.json());  
