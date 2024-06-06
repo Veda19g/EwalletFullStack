@@ -1,5 +1,7 @@
 Project Title: Secure and User-Friendly eWallet App Development using MERN Stack
 
+DeployedLink: https://frontend-smoky-eight-36.vercel.app/
+
 Project Description:
 
 I have developed a comprehensive eWallet application using the MERN stack (MongoDB, Express.js, React.js, Node.js) that provides users with a secure and intuitive platform for managing their finances. Below are the key features and functionalities of the app:
